@@ -11,40 +11,43 @@
 
 <body class="page">
     <header class="header">
-        <div class="header__title">
-            <a href="./index.html" class="header__main-link">
-                <div class="header__image"></div>
-                <h1 class="header__title-text">Вселенная Метро</h1>
-            </a>
-        </div>
+        <a href="./index.html" class="header__main-link">
+            <div class="header__image"></div>
+            <h1 class="header__title-text">Вселенная Метро</h1>
+        </a>
         <nav class="header__nav">
-            <div class="dropdown">
-                <a href="./books.html" class="dropdown__title">Книги</a>
-                <div class="dropdown__content">
-                    <a href="./book_metro_2033.html" class="dropdown__link">Метро 2033</a>
-                    <a href="./book_metro_2034.html" class="dropdown__link">Метро 2034</a>
-                    <a href="./book_metro_2035.html" class="dropdown__link">Метро 2035</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="./games.html" class="dropdown__title">Видеоигры</a>
-                <div class="dropdown__content">
-                    <a href="./game_metro_2033.html" class="dropdown__link">Metro 2033</a>
-                    <a href="./game_metro_last_light.html" class="dropdown__link">Metro: Last Light</a>
-                    <a href="./game_metro_exodus.html" class="dropdown__link">Metro Exodus</a>
-                </div>
-            </div>
+            <ul class="header__nav-list">
+                <li class="dropdown">
+                    <a href="./books.html" class="dropdown__title">Книги</a>
+                    <ul class="dropdown__content">
+                        <li><a href="./book_metro_2033.html" class="dropdown__link">Метро 2033</a></li>
+                        <li><a href="./book_metro_2034.html" class="dropdown__link">Метро 2034</a></li>
+                        <li><a href="./book_metro_2035.html" class="dropdown__link">Метро 2035</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="./games.html" class="dropdown__title">Видеоигры</a>
+                    <ul class="dropdown__content">
+                        <li><a href="./game_metro_2033.html" class="dropdown__link">Metro 2033</a></li>
+                        <li><a href="./game_metro_last_light.html" class="dropdown__link">Metro: Last Light</a></li>
+                        <li><a href="./game_metro_exodus.html" class="dropdown__link">Metro Exodus</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
     <main class="main">
         <div class="main__feed">
-            
+            <h2 class="main_title">Метро 2035</h2>
         </div>
     </main>
     <footer class="footer">
         <div class="footer__footnote">
             <p class="footer__footnote-text">* Глуховский Дмитрий Алексеевич признан в РФ иностранным агентом</p>
-            <h2 class="footer__footnote-age">18+</h2>
+            <span class="footer__footnote-age">18+</span>
+        </div>
+        <div class="footer__copyright">
+            <p>© 2026 Вселенная Метро. Сайт создан Егором Муртазалиевым.</p>
         </div>
     </footer>
 </body>

@@ -1,3 +1,8 @@
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+
 .page {
     background-color: black;
     color: aliceblue;
@@ -20,11 +25,8 @@
     z-index: 100;
 }
 
-.header__title {
-    margin-left: 5%;
-}
-
 .header__main-link {
+    margin-left: 5%;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -43,6 +45,7 @@
 .header__title-text {
     color: aliceblue;
     font-size: 40px;
+    margin: 0px;
 }
 
 .header__nav {
@@ -51,27 +54,43 @@
     margin-right: 15%;
 }
 
+.header__nav-list {
+    display: flex;
+    gap: 150px;
+    margin-right: 15%;
+    list-style: none;
+}
+
 .dropdown {
     position: relative;
-    display: inline-block;
+    list-style: none;
 }
 
 .dropdown__title {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 28px;
     cursor: pointer;
-    padding: 20px 20px;
-    margin: -20px -20px;
-    font-size: 24px;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown__content {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background-color: #071F22;
-    border-radius: 10px;
+    list-style: none;
     min-width: 155px;
-    top: 170%;
-    left: -20px;
-    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown__content li {
+    list-style: none;
 }
 
 .dropdown__link {
@@ -79,13 +98,14 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 16px;
+    font-size: 20px;
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
 }
 
-.dropdown__link:hover,
-.dropdown__title:hover {
+.dropdown__title:hover,
+.dropdown__link:hover {
     background-color: #0a3a42;
-    border-radius: 10px;
 }
 
 .dropdown:hover .dropdown__content {
@@ -108,6 +128,16 @@
     justify-content: center;
 }
 
+.main_title {
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #323232;
+    margin-bottom: 10px;
+}
+
 .main__feed {
     width: 75%;
     min-width: 768px;
@@ -117,7 +147,13 @@
     box-sizing: border-box;
 }
 
-.main__first-text {
+.main__info h2 {
+    font-size: 40px;
+    margin: 15px 0px;
+    border-bottom: 1px solid #323232;
+}
+
+.main__info p {
     font-size: 32px;
     margin: 15px 0px;
 }
@@ -126,6 +162,7 @@
     display: flex;
     gap: 0px;
     margin: 40px;
+    list-style: none;
 }
 
 .card__block {
@@ -133,6 +170,7 @@
     flex: none;
     box-sizing: border-box;
     padding: 0 100px;
+    list-style: none;
 }
 
 .card__block--3 {
@@ -196,21 +234,26 @@
     background-image: url('images/metro_exodus_game_cover.jpg');
 }
 
-.card__image--books:hover,
-.card__image--games:hover,
-.card__image--metro-2033:hover,
-.card__image--metro-2034:hover,
-.card__image--metro-2035:hover,
-.card__image--metro-2033_:hover,
-.card__image--metro-last-light:hover,
-.card__image--metro-exodus:hover {
+.card__link:hover .card__image--books,
+.card__link:hover .card__image--games,
+.card__link:hover .card__image--metro-2033,
+.card__link:hover .card__image--metro-2034,
+.card__link:hover .card__image--metro-2035,
+.card__link:hover .card__image--metro-2033_,
+.card__link:hover .card__image--metro-last-light,
+.card__link:hover .card__image--metro-exodus {
     filter: grayscale(0%) brightness(1);
+}
+
+.card__link:hover .card__title {
+    color: #F8BC09;
 }
 
 .card__title {
     font-size: 64px;
     color: aliceblue;
     margin: 0px;
+    transition: color 0.5s ease;
 }
 
 .card__title--3 {
@@ -218,11 +261,40 @@
 }
 
 .footer {
-    padding: 0% 5%;
+    padding: 40px 5% 20px;
+    background-color: #070707;
+    color: aliceblue;
 }
 
 .footer__footnote {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #323232;
+    margin-bottom: 20px;
+}
+
+.footer__footnote-text {
+    font-size: 14px;
+    margin: 0;
+    color: #BBBBBB;
+}
+
+.footer__footnote-age {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #8B0000;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+.footer__copyright {
+    text-align: center;
+}
+
+.footer__copyright p {
+    font-size: 14px;
+    margin: 0;
+    color: #909090;
 }
