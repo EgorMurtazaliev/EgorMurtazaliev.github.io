@@ -1,6 +1,10 @@
-ul {
+ul, ol {
     padding-left: 0;
     margin: 0;
+}
+
+[id] {
+    scroll-margin-top: 90px;  /* высота вашей шапки + запас */
 }
 
 .page {
@@ -58,7 +62,6 @@ ul {
     display: flex;
     gap: 150px;
     margin-right: 15%;
-    list-style: none;
 }
 
 .dropdown {
@@ -83,7 +86,6 @@ ul {
     top: 100%;
     left: 0;
     background-color: #071F22;
-    list-style: none;
     width: 155px;
     border-radius: 10px;
     overflow: hidden;
@@ -134,7 +136,7 @@ ul {
     max-width: 1920px;
     background-color: #191F23;
     height: auto;
-    padding: 0% 3%;
+    padding: 0 3% 2%;
     box-sizing: border-box;
 }
 
@@ -157,7 +159,6 @@ ul {
     display: flex;
     gap: 0px;
     margin: 40px;
-    list-style: none;
 }
 
 .card__block {
@@ -270,7 +271,7 @@ ul {
     text-decoration: underline;
 }
 
-.sidebar {
+.article__sidebar {
     margin-left: 2%;
     min-width: 200px;
     width: 30%;
@@ -281,26 +282,26 @@ ul {
     border-radius: 10px;
 }
 
-.sidebar__image div {
+.article__sidebar-image div {
     aspect-ratio: 4/5;
     background-image: url('images/metro_2033_book_cover.jpg');
     background-size: cover;
     border-radius: 3px;
 }
 
-.sidebar__image p {
+.article__sidebar-image p {
     font-size: 14pt;
     text-align: center;
     margin: 12px 0 25px 0;
 }
 
-.sidebar__info ul {
+.article__sidebar-info ul {
     padding: 0;
     margin: 15px 0 0 0;
 
 }
 
-.sidebar__info li {
+.article__sidebar-info li {
     list-style: none;
     font-size: 14pt;
     padding: 8px 0;
@@ -310,7 +311,7 @@ ul {
     word-break: break-word;
 }
 
-.sidebar__info strong {
+.article__sidebar-info strong {
     display: block;
     width: 50%;
     flex-shrink: 0;
@@ -319,6 +320,94 @@ ul {
 .article__content {
     font-size: 18pt;
 }
+
+.article__content h3 {
+    font-size: 28pt;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #323232;
+    margin: 10px 0;
+}
+
+.article__content h4 {
+    font-size: 20pt;
+    padding: 0;
+    margin: 40px 0 15px;
+}
+
+.article__section h4:first-of-type {
+    margin: 15px 0;
+}
+
+.article__content p {
+    margin: 15px 0;
+}
+
+.article__section li {
+    list-style-type: disc;
+    display: list-item;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+
+.article__navigation h3 {
+    margin: 0;
+}
+
+.article__navigation {
+    position: relative;
+    width: 40%;
+    min-width: 400px;
+    border: 3px solid #191F23;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    overflow: hidden;
+    z-index: 0;
+    line-height: 2;
+    counter-reset: main-counter 0;
+}
+
+.article__navigation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/nav_background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) brightness(0.25) blur(2px) opacity(75%);
+    z-index: -1;
+}
+
+.article__navigation>ol>li {
+    list-style: none;
+    counter-increment: main-counter;
+}
+
+.article__navigation>ol>li>a::before {
+    content: counter(main-counter) ". ";
+    font-weight: bold;
+}
+
+.article__nav-chapter {
+    counter-reset: sub-counter;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.article__nav-chapter li {
+    counter-increment: sub-counter;
+}
+
+.article__nav-chapter a::before {
+    content: counter(main-counter) "." counter(sub-counter) " ";
+}
+
+/* .article__navigation a {
+    color: #e0e0e0;
+} */
 
 .footer {
     padding: 40px 5% 20px;
