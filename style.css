@@ -58,14 +58,13 @@ ol {
 
 .header__nav {
     display: flex;
-    gap: 150px;
-    margin-right: 15%;
+    gap: 75px;
+    margin-right: 10%;
 }
 
 .header__nav-list {
     display: flex;
-    gap: 150px;
-    margin-right: 15%;
+    gap: 50px;
 }
 
 .dropdown {
@@ -73,15 +72,24 @@ ol {
     list-style: none;
 }
 
-.dropdown__title {
+.dropdown__title,
+.header__auth {
     color: aliceblue;
     text-decoration: none;
     font-size: 20pt;
     cursor: pointer;
     padding: 10px 20px;
     display: inline-block;
+}
+
+.dropdown__title {
     border-radius: 10px;
     transition: background-color 0.3s ease;
+}
+
+.header__auth {
+    width: 200px;
+    font-weight: 800;
 }
 
 .dropdown__content {
@@ -417,12 +425,12 @@ ol {
 .article__navigation a {
     color: #C0C0C0;
     text-decoration: none;
-} 
+}
 
 .article__navigation a:hover {
     color: #F8BC09;
     text-decoration: none;
-} 
+}
 
 .spoiler {
     display: flex;
@@ -478,6 +486,92 @@ ol {
     text-align: center;
     color: #C0C0C0;
     margin: 5px 0 10px;
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1F1F1F;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 100px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.auth--inactive {
+    display: none;
+}
+
+.auth__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #F8BC09;
+}
+
+.auth__input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2F2F2F;
+    color: #FFFFFF;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.auth__input:focus {
+    outline: none;
+    background-color: #3F3F3F;
+    box-shadow: 0 0 0 2px #F8BC09;
+}
+
+.auth__input::placeholder {
+    color: #888;
+}
+
+.auth__button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F8BC09;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1F1F1F;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.auth__button:hover {
+    background-color: #D0A006;
+    transform: scale(1.025);
+}
+
+.auth__switch {
+    margin-top: 20px;
+    color: #C0C0C0;
+    font-size: 12pt;
+}
+
+.auth__link {
+    background: none;
+    border: none;
+    color: #F8BC09;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 12pt;
+    transition: color 0.3s ease;
+}
+
+.auth__link:hover {
+    color: #D0A006;
+    text-decoration: underline;
 }
 
 .footer {

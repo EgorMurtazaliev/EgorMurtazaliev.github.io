@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вселенная Метро — Вход</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./images/icon.png" />
+    <script src="/js/components.js" defer></script>
+    <script src="/js/auth.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+</head>
+
+<body class="page">
+    <header></header>
+
+    <main class="main">
+        <div class="main__feed">
+            <div class="auth" id="login-form">
+                <h2 class="auth__title">Вход</h2>
+                <input class="auth__input" id="login-username" placeholder="Логин">
+                <input class="auth__input" id="login-password" type="password" placeholder="Пароль">
+                <button class="auth__button" onclick="handleLogin()">Войти</button>
+                <p class="auth__switch">Ещё нет аккаунта?<button class="auth__link" onclick="showRegister()">Зарегистрироваться</button></p>
+            </div>
+            <div class="auth auth--inactive" id="register-form">
+                <h2 class="auth__title">Регистрация</h2>
+                <input class="auth__input" id="reg-username" placeholder="Логин">
+                <input class="auth__input" id="reg-password" type="password" placeholder="Пароль">
+                <button class="auth__button" onclick="handleRegister()">Зарегистрироваться</button>
+                <p class="auth__switch">Уже есть аккаунт?<button class="auth__link" onclick="showLogin()">Войти</button></p>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
