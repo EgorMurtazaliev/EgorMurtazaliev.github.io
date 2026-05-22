@@ -274,12 +274,14 @@ ol {
     line-height: 1.5;
 }
 
-.article a {
+.article a,
+.comments a {
     color: #F8BC09;
     text-decoration: none;
 }
 
-.article a:hover {
+.article a:hover,
+.comments a:hover {
     color: #f7df97;
     text-decoration: underline;
 }
@@ -295,17 +297,73 @@ ol {
     border-radius: 10px;
 }
 
-.article__sidebar-image div {
+.slider {
+    position: relative;
+}
+
+.slider__slides {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slider__slide {
+    display: block;
+    width: 100%;
+}
+
+.slider__slide--inactive {
+    display: none;
+    width: 100%;
+}
+
+.slider__image {
     aspect-ratio: 4/5;
-    background-image: url('images/metro_2033_book_cover.jpg');
     background-size: cover;
+    background-position: center;
     border-radius: 3px;
 }
 
-.article__sidebar-image p {
+.slider__caption {
     font-size: 14pt;
     text-align: center;
-    margin: 12px 0 25px 0;
+    padding: 0 50px;
+}
+
+.slider__buttons {
+    position: absolute;
+    top: 92%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.slider__button {
+    background-color: #888;
+    color: #2F2F2F;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    padding: 0px 10px 7px;
+    font-size: 18pt;
+    border-radius: 40%;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.slider__button:hover {
+    background-color: #D0A006;
+}
+
+.slider__button--prev {
+    left: 50%;
+}
+
+.slider__button--next {
+    right: 50%;
 }
 
 .article__sidebar-info ul {
