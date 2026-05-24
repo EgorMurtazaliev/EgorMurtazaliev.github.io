@@ -303,7 +303,6 @@ ol {
 
 .slider__slides {
     overflow: hidden;
-    border-radius: 10px;
     position: relative;
 }
 
@@ -417,7 +416,7 @@ ol {
 .article__section li {
     list-style-type: disc;
     display: list-item;
-    margin-left: 30px;
+    margin: 15px 0 15px 30px;
     padding-left: 10px;
 }
 
