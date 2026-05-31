@@ -55,6 +55,27 @@ function initDefaultComments() {
             author: 'admin',
             text: 'Мы подумаем над вашем предложением.',
             date: '20 мая 2026 г. в 15:31'
+        },
+        {
+            id: 9,
+            articleId: 'game_metro_2033',
+            author: 'user',
+            text: 'Не знал что у игры есть оказывается приписка "Fear the Future"',
+            date: '14 апреля 2026 г. в 13:21'
+        },
+        {
+            id: 10,
+            articleId: 'game_metro_exodus',
+            author: 'admin',
+            text: 'Как думаете историю Артёма продолжат в следующих играх?',
+            date: '24 февраля 2019 г. в 11:52'
+        },
+        {
+            id: 11,
+            articleId: 'game_metro_exodus',
+            author: 'user',
+            text: 'Учитывая что при анонсе новой Метро 2039 не сказали ни слова про Артёма, его арка завершена, зато будет Хантер!!!',
+            date: '20 апреля 2026 г. в 19:39'
         }
     ];
 

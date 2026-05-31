@@ -12,7 +12,7 @@
     <script src="/js/comments.js"></script>
     <script src="/js/slider.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             window.currentArticleId = 'game_metro_exodus';
             initComments(window.currentArticleId);
         });
@@ -21,23 +21,43 @@
 
 <body class="page">
     <header></header>
-    
+
     <main class="main">
         <div class="main__feed">
             <h2 class="main_title">Metro Exodus</h2>
             <article class="article">
-                
-                <!-- <section class="comments">
+                <div class="article__sidebar">
+                    <div class="slider__slide">
+                        <div class="slider__image"
+                            style="background-image: url('../images/game_metro_exodus_cover.jpg');"></div>
+                        <p class="slider__caption">Ключевой арт Metro Exodus</br>(2019 год)</p>
+                    </div>
+                    <ul class="article__sidebar-info">
+                        <li><strong>Разработчик:</strong> 4A Games</li>
+                        <li><strong>Издатель:</strong> Deep Silver, Бука</li>
+                        <li><strong>Год выхода:</strong> 2019</li>
+                        <li><strong>Жанры:</strong> Шутер от первого лица</li>
+                        <li><strong>Сценарий:</strong> Дмитрий Глуховский*</br> Андрей Пасхалов</li>
+                        <li><strong>Серия:</strong> <a href="/articles/games.html">Metro</a></li>
+                        <li><strong>Предыдущая игра:</strong> <a href="/articles/game_metro_last_light.html">Metro: Last Light</a></li>
+                        <li><strong>Следующая игра:</strong> Metro 2039</li>
+                    </ul>
+                </div>
+                <div class="article__content">
+
+                </div>
+                <section class="comments">
                     <h3 class="comments__title">Комментарии (<span id="comments-count">0</span>)</h3>
                     <div class="comments__form" id="comment-form">
-                        <textarea class="comments__textarea" id="comment-text" placeholder="Ваш комментарий..." rows="3"></textarea>
+                        <textarea class="comments__textarea" id="comment-text" placeholder="Ваш комментарий..."
+                            rows="3"></textarea>
                         <button class="comments__button" id="comment-button">Отправить</button>
                     </div>
                     <div class="comments__auth" id="comment-auth" style="display: none;">
                         <p>Войдите, чтобы оставить комментарий → <a href="/auth.html">Вход</a></p>
                     </div>
                     <div class="comments__list" id="comments-list"></div>
-                </section> -->
+                </section>
             </article>
         </div>
     </main>

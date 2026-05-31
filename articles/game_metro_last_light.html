@@ -12,7 +12,7 @@
     <script src="/js/comments.js"></script>
     <script src="/js/slider.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             window.currentArticleId = 'game_metro_last_light';
             initComments(window.currentArticleId);
         });
@@ -26,8 +26,38 @@
         <div class="main__feed">
             <h2 class="main_title">Metro: Last Light</h2>
             <article class="article">
+                <div class="article__sidebar">
+                    <div class="slider">
+                        <div class="slider__slides">
+                            <div class="slider__slide">
+                                <div class="slider__image" style="background-image: url('../images/game_metro_last_light_cover.jpg');"></div>
+                                <p class="slider__caption">Ключевой арт</br>Metro: Last Light</br>(2013 год)</p>
+                            </div>
+                            <div class="slider__slide--inactive">
+                                <div class="slider__image" style="background-image: url('../images/game_metro_last_light_redux_cover.jpg');"></div>
+                                <p class="slider__caption">Ключевой арт</br>Metro: Last Light Redux</br>(2014 год)</p>
+                            </div>
+                        </div>
+                        <div class="slider__buttons">
+                            <button class="slider__button slider__button--prev">←</button>
+                            <button class="slider__button slider__button--next">→</button>
+                        </div>
+                    </div>
+                    <ul class="article__sidebar-info">
+                        <li><strong>Разработчик:</strong> 4A Games</li>
+                        <li><strong>Издатель:</strong> Deep Silver, Бука</li>
+                        <li><strong>Год выхода:</strong> 2013 (Redux — 2014)</li>
+                        <li><strong>Жанры:</strong> Шутер от первого лица</li>
+                        <li><strong>Сценарий:</strong> Дмитрий Глуховский*</li>
+                        <li><strong>Серия:</strong> <a href="/articles/games.html">Metro</a></li>
+                        <li><strong>Предыдущая игра:</strong> <a href="/articles/game_metro_2033.html">Metro 2033</a></li>
+                        <li><strong>Следующая игра:</strong> <a href="/articles/game_metro_exodus.html">Metro Exodus</a></li>
+                    </ul>
+                </div>
+                <div class="article__content">
 
-                <!-- <section class="comments">
+                </div>
+                <section class="comments">
                     <h3 class="comments__title">Комментарии (<span id="comments-count">0</span>)</h3>
                     <div class="comments__form" id="comment-form">
                         <textarea class="comments__textarea" id="comment-text" placeholder="Ваш комментарий..." rows="3"></textarea>
@@ -37,7 +67,7 @@
                         <p>Войдите, чтобы оставить комментарий → <a href="/auth.html">Вход</a></p>
                     </div>
                     <div class="comments__list" id="comments-list"></div>
-                </section> -->
+                </section>
             </article>
         </div>
     </main>
