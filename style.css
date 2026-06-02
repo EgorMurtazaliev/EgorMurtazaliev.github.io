@@ -404,6 +404,7 @@ ol {
     font-size: 20pt;
     padding: 0;
     margin: 40px 0 15px;
+    clear: both;
 }
 
 .article__section h4:first-of-type {
