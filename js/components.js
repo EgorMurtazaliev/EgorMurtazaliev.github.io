@@ -36,7 +36,9 @@ function updateAuthButton() {
         authLink.onclick = (e) => {
             e.preventDefault();
             localStorage.setItem('redirectAfterLogin', window.location.pathname);
-            window.location.href = '/auth.html';
+            const path = window.location.pathname;
+            const isInArticles = path.includes('/articles/');
+            window.location.href = isInArticles ? '../auth.html' : 'auth.html';
         };
 
         authLink.onmouseenter = null;
@@ -50,8 +52,35 @@ function logout() {
     location.reload();
 }
 
+function fixHeaderLinks() {
+    const path = window.location.pathname;
+    const isInArticles = path.includes('/articles/');
+
+    document.querySelectorAll('.header a, .header__auth, .dropdown a').forEach(link => {
+        let href = link.getAttribute('href');
+        if (!href) return;
+        if (href === '#' || href.startsWith('#')) return;
+
+        if (href === 'index.html' || href === 'auth.html') {
+            link.href = isInArticles ? '../' + href : href;
+        } else if (href.includes('articles/')) {
+            if (isInArticles && !href.startsWith('../')) {
+                link.href = '../' + href;
+            }
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-    await loadComponent('header', '/components/header.html');
-    await loadComponent('footer', '/components/footer.html');
-    updateAuthButton();
+    const path = window.location.pathname;
+    const isInArticles = path.includes('/articles/');
+    const prefix = isInArticles ? '../' : '';
+
+    await loadComponent('header', prefix + 'components/header.html');
+    await loadComponent('footer', prefix + 'components/footer.html');
+
+    setTimeout(() => {
+        fixHeaderLinks();
+        updateAuthButton();
+    }, 50);
 });

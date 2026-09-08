@@ -11,7 +11,7 @@ function handleLogin() {
     if (user) {
         localStorage.setItem('currentUser', JSON.stringify({ login: user.login }));
         alert(`Добро пожаловать, ${login}!`);
-        const redirectUrl = localStorage.getItem('redirectAfterLogin') || '/index.html';
+        const redirectUrl = localStorage.getItem('redirectAfterLogin') || 'index.html';
         localStorage.removeItem('redirectAfterLogin');
         window.location.href = redirectUrl;
     } else {
